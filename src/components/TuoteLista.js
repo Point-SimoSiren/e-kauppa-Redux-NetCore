@@ -12,8 +12,8 @@ const TuoteLista = (props) => {
         props.notificationAction(`${tuote.tuotenimi}" lisätty ostoskoriin`, 7)
     }
     return (
-        <div>
-            <h3>Tuotteet</h3>
+        <div style={{ paddingTop: 70 }}>
+            <h4>Tuotteet</h4>
 
             {props.tuotteet.map(tuote =>
                 <div key={tuote.tuoteId} className="card">
@@ -22,6 +22,8 @@ const TuoteLista = (props) => {
                         <h4>{tuote.tuotenimi}</h4>
                     </div>
                     <div className="card-body">
+                        <img style={{ width: 30, height: 20 }} src={tuote.kuvalinkki1}
+                            alt='paita' />
                         <p>{tuote.kuvaus}</p>
                         <h4>Hinta {tuote.hinta} €</h4>
                         <h4>Tuotetta jäljellä: {tuote.varastosaldo} kpl</h4>

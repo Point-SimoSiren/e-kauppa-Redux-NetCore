@@ -6,28 +6,20 @@ import Notification from './Notification'
 class AppNavbar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-expand-md navbar-dark bg-primary mb-4">
+            <nav className="navbar navbar-expand-md fixed-top navbar-dark bg-primary mb-3">
                 <div className="container">
-
                     <Link to="/" className="navbar-brand">
-                        e-kauppa
+                        Tuotteet
                     </Link>
 
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navbarMain">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div className="collapse navbar-collapse" id="navbarMain">
+                    <div className="navbar-brand">
                         <ul className="navbar-nav mr-auto">
+                            <li><Notification /></li>
                             <li className="nav-item">
-                                <Link to="/ostoskori" className="nav-link">
-                                    Ostoskori
+                                <Link to="/ostoskori" className="navbar-brand">
+                                    <i className="fas fa-shopping-cart"></i> Ostoskori
                             </Link>
-                                <Notification />
+
                             </li>
                         </ul>
                     </div>
