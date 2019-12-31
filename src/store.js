@@ -11,10 +11,17 @@ const reducer = combineReducers({
     korituotteet: koriReducer
 })
 
+const persistedState = localStorage.getItem('reduxState') ? JSON.parse(localStorage.getItem('reduxState')) : {}
+
 const store = createStore(
-    reducer,
+    reducer, persistedState,
     composeWithDevTools(
         applyMiddleware(thunk)
     )
 )
+
+store.subscribe(() => {
+    localStorage.setItem('reduxState', JSON.stringify(store.getState()))
+})
+
 export default store

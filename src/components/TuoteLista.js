@@ -27,7 +27,7 @@ const TuoteLista = (props) => {
                         <p>{tuote.kuvaus}</p>
                         <h4>Hinta {tuote.hinta} €</h4>
                         <h4>Tuotetta jäljellä: {tuote.varastosaldo} kpl</h4>
-                        <button class="myButton" onClick={() => pick(tuote)} >osta</button>
+                        <button className="myButton" onClick={() => pick(tuote)} >osta</button>
                     </div>
                 </div>
             )}

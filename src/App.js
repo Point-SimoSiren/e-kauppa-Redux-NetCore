@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import Ostoskori from './components/Ostoskori'
 
 const App = (props) => {
+
     useEffect(() => {
         props.initTuotteet()
     }, [])

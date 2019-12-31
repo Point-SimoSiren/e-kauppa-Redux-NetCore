@@ -1,10 +1,15 @@
-const koriReducer = (state = [], action) => {
+const initialState = []
+
+const koriReducer = (state = initialState, action) => {
     switch (action.type) {
+
         case 'ADD':
+            window.localStorage.korituotteet.concat(JSON.stringify(action.data)
+            )
             return [...state, action.data]
 
         default:
-            return state;
+            return state
     }
 }
 

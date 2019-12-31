@@ -8,26 +8,19 @@ const tuoteReducer = (state = initialState, action) => {
         case 'INIT':
             return action.data
 
-        case 'CREATE':
-            return {
-                ...state,
-                tuotteet: [action.data, ...state.tuotteet]
-            }
+        /*-----VARALLA TUOTTEEN LUONTI-------------------
+         case 'CREATE':
+             return {
+                 ...state,
+                 tuotteet: [action.data, ...state.tuotteet]
+             }
+    ---------------------------- */
+
         default: return state
     }
 }
 
 //------------------ACTION-CREATORS-------------------
-
-export const createAction = submitted => {
-    return async dispatch => {
-        const uusiTuote = await tuoteService.create(submitted)
-        dispatch({
-            type: 'CREATE',
-            data: uusiTuote
-        })
-    }
-}
 
 export const initTuotteet = () => {
     return async (dispatch) => {
@@ -38,5 +31,16 @@ export const initTuotteet = () => {
         })
     }
 }
+
+/*---------VARALLA TUOTTEEN LUONTI ACTION----------
+export const createAction = submitted => {
+    return async dispatch => {
+        const uusiTuote = await tuoteService.create(submitted)
+        dispatch({
+            type: 'CREATE',
+            data: uusiTuote
+        })
+    }
+}---------------------------------------------- */
 
 export default tuoteReducer
