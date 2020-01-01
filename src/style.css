@@ -20,3 +20,51 @@
 	position:relative;
 	top:1px;
 }
+
+.Btn-poista {
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#f24537;
+	display:inline-block;
+	border-radius:11px;
+	border:1px solid #b33281;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:15px;
+	padding:10px 12px;
+	text-decoration:none;
+}
+.Btn-poista:hover {
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	background-color:#c62d1f;
+}
+.Btn-poista:active {
+	position:relative;
+	top:1px;
+}
+
+.Btn-plus {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:10px;
+	border:2px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:7px 11px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.Btn-plus:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.Btn-plus:active {
+	position:relative;
+	top:1px;
+}
+

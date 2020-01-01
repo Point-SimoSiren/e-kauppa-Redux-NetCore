@@ -10,7 +10,7 @@ const App = (props) => {
 
     useEffect(() => {
         props.initTuotteet()
-    }, [])
+    })
 
     return (
         <Router>

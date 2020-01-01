@@ -6,8 +6,14 @@ import { connect } from 'react-redux'
 const Notification = (props) => {
   const notifyingStyle = {
     color: 'white',
-    padding: 10,
-    background: 'darkgreen'
+    fontSize: 20,
+    padding: 20,
+    paddingLeft: 120,
+    paddingRight: 120,
+    marginRight: 40,
+    background: 'darkGreen',
+    borderStyle: 'solid',
+    borderColor: 'white'
   }
 
   const message = props.notification
